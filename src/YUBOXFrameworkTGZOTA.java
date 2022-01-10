@@ -88,8 +88,7 @@ implements Tool
         for (File entry : lsdata) {
             String fn = entry.getName();
 
-            // TODO: permitir variantes distintas a nodemcu-32s
-            if (entry.isFile() && fn.startsWith(ybxProjectName) && fn.endsWith(".ino.nodemcu-32s.bin")) {
+            if (entry.isFile() && fn.startsWith(ybxProjectName+".ino.") && fn.endsWith(".bin")) {
                 exportedBinFound = true;
                 ybxContent.add(entry);
                 System.out.println("\t"+entry.getName());
