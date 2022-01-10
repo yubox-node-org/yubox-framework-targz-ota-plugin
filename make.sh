@@ -27,7 +27,7 @@ echo "lib2_path: $lib2_path"
 set -e
 
 mkdir -p bin
-javac -target 1.8 -cp "$pde_path:$core_path:$lib_path:$lib2_path" \
+javac -source 7 -target 7 -cp "$pde_path:$core_path:$lib_path:$lib2_path" \
       -d bin `find src/ -name *.java` `find lib/ -name *.java`
 
 pushd bin
